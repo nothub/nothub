@@ -1,4 +1,4 @@
-<p align="center">🥦!</p>
+![](https://github-readme-stats.vercel.app/api?username=nothub&count_private=true&hide=commits&show_icons=true&title_color=e6db74&text_color=e6db74&icon_color=e6db74&bg_color=222222&cache_seconds=1800)
 <details><summary>do not click</summary>
 ╯:trollface:╯︵ ┻━┻<br>
 ╯:trollface:╯︵ ┻━┻<br>
