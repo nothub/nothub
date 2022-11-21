@@ -1,0 +1,10 @@
+*
+!*/
+
+!/README.md
+!/contrib-graph.svg
+
+!/.gitattributes
+!/.gitignore
+
+!/.github/**/*.yaml

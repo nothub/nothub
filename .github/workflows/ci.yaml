@@ -1,0 +1,19 @@
+name: '🧑‍🏭'
+on: [ push ]
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3.1.0
+      - uses: yoshi389111/github-profile-3d-contrib@0.7.0
+        env:
+          USERNAME: ${{ github.repository_owner }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MAX_REPOS: 9001
+      - run: |
+          mv profile-3d-contrib/profile-gitblock.svg contrib-graph.svg
+          git add contrib-graph.svg
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git commit -m "🤖"
+          git push
