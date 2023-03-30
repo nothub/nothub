@@ -1,8 +1,11 @@
 name: '🧑‍🏭'
 on:
-  - push
-  - schedule:
-      - cron: '20 4 * * *'
+  push:
+    branches:
+      - main
+      - master
+  schedule:
+    - cron: '20 4 * * *'
 jobs:
   ci:
     runs-on: ubuntu-latest
