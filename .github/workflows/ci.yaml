@@ -1,11 +1,16 @@
 name: '🧑‍🏭'
-on: [ push ]
+on:
+  - push
+  - schedule:
+      - cron: '20 4 * * *'
 jobs:
   ci:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3.4.0
+        if: github.event_name != 'pull_request'
       - uses: yoshi389111/github-profile-3d-contrib@0.7.1
+        if: github.event_name != 'pull_request'
         env:
           USERNAME: ${{ github.repository_owner }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -17,3 +22,4 @@ jobs:
           git config user.email github-actions@github.com
           git commit -m "🤖"
           git push
+        if: github.event_name != 'pull_request'
