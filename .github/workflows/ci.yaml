@@ -10,7 +10,7 @@ jobs:
   ci:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3.5.0
+      - uses: actions/checkout@v3.5.2
         if: github.event_name != 'pull_request'
       - uses: yoshi389111/github-profile-3d-contrib@0.7.1
         if: github.event_name != 'pull_request'
